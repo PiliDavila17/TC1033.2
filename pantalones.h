@@ -37,6 +37,7 @@ string Pantalones::get_tipo(){
 void Pantalones::set_talla(string ta){
 	talla=ta;
 }
+
 void Pantalones::set_tipo(string ti){
 	tipo=ti;
 }
