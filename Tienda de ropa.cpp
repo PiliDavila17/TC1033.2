@@ -7,19 +7,21 @@ Campus Querétaro
 TC1033
 
 */
-#include <string>
+#include<iostream>
+
+using namespace std;
+
 #include "pantalones.h"
 #include "faldas.h"
 #include "blusas.h"
-
-using namespace std;
 
 
 int main(){
 	int o;
 	string ti;
-	string tal;
+	string ta;
 	string fin;
+	string ep;
 	int cont;
 	int total;
 	int pant=400;
@@ -28,7 +30,7 @@ int main(){
 	
 	while (true){
 	
-	cout<<"Que prenda quieres? \n1. Pantalon \n2. Falda \n3. Blusa \n4. Finalizar compra\n";
+	cout<<"MENU \nQue prenda quieres? \n1. Pantalon \n2. Falda \n3. Blusa \n4. Finalizar compra\n";
 	cin>>o;
 	
 
@@ -37,15 +39,20 @@ int main(){
 		total=total+pant;
 		cout<<"Describe tu pantalon ideal"<<endl;
 		
-			Pantalones pantalon_1("Talla: CH, M, G, XL", "Tipo: Mezclilla, Vestir, Cuero, Manta");
-			cout 	<< pantalon_1.get_talla()<<" "\
-		  			<< pantalon_1.get_tipo() <<endl;
-		  	cout<<"Introduzca la talla: ";
-			cin>>ti;
-		  	ti==ti;
-		  	cout<<"Introduzca el tipo: "<<endl;
-			cin>>tal;
-			tal==tal;					  		
+			Pantalones pantalon_1("Talla: \na)Chica \nb)Mediana \nc)Grande \nd)Extra Grande:", "\nTipo: \na)Mezclilla \nb)Vestir \nc)Cuero \nd)Manta", "\nEpoca: \na) 70s \nb) 80s \nb) 90s: ");
+			cout 	<< pantalon_1.getTalla()<<" "<<endl;
+						cout<<"Introduzca la talla: ";
+						cin>>ta;
+					  	pantalon_1.setTalla(ta);
+		  	cout	<< pantalon_1.getTipo() <<endl;
+			  	cout<<"Introduzca el tipo: ";
+				cin>>ti;
+				pantalon_1.setTipo(ti);
+			cout 	<< pantalon_1.getEpoca()<<endl;
+				cout<<"Introduzca la Epoca: "<<endl;
+				cin>>ep;
+				pantalon_1.setEpoca(ep);
+				cout<<"Se ha guardado su eleccion"<<endl<<endl;			  		
 	}
 	else 
 		if (o==2)
@@ -54,14 +61,17 @@ int main(){
 			cout<<"Describe tu falda ideal"<<endl;
 			
 				Faldas falda_1("Talla: CH, M, G, XL", "Tipo: Corta, Larga, Midi");
-				cout 	<< falda_1.get_talla()<<" "\
-			  			<< falda_1.get_tipo() <<endl;
-			  	cout<<"Introduzca la talla: ";
-				cin>>ti;
-			  	ti==ti;
-			  	cout<<"Introduzca el tipo: "<<endl;
-				cin>>tal;
-				tal==tal;			
+				cout 	<< falda_1.getTalla()<<" "<<endl;
+						cout<<"Introduzca la talla: "<<endl;
+						cin>>ta;
+			  			falda_1.setTalla(ta);
+			  			
+			  	cout	<<falda_1.getTipo() <<endl;
+					  	cout<<"Introduzca el tipo: "<<endl;
+						cin>>ti;
+						falda_1.setTipo(ti);
+						
+				cout<<"Se ha guardado su elección"<<endl;			
 				
 		}
 	else 
@@ -71,14 +81,18 @@ int main(){
 			cout<<"Describe tu blusa ideal"<<endl;
 			
 					Blusas blusa_1("BLUSA 1 ->Talla: CH", "Tipo: Manga corta");
-				cout 	<< blusa_1.get_talla()<<" "\
-			  			<< blusa_1.get_tipo() <<endl;
-				cout<<"Introduzca la talla: ";
-				cin>>ti;
-			  	ti==ti;
-			  	cout<<"Introduzca el tipo: "<<endl;
-				cin>>tal;
-				tal==tal;
+				cout 	<<	blusa_1.getTalla()<<" ";
+							cout<<"Introduzca la talla: ";
+							cin>>ta;
+						  	blusa_1.setTalla(ta);
+						  	
+			  	cout	<< blusa_1.getTipo() <<endl;
+						  	cout<<"Introduzca el tipo: "<<endl;
+							cin>>ti;
+							blusa_1.setTipo(ti);
+							
+				cout<<"Se ha guardado su elección"<<endl;
+							
 		}
 	else
 		if(o==4)

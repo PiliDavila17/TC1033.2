@@ -1,43 +1,23 @@
 //Clase Pantalones
-//Objetos 
-//	talla (CH,M,G,XG)
-//	Tipo (Mezclilla o Vestir)
+//Hija de Ropa
 
-#include<string>
-#include<iostream>
+#include"ropa.h"
 
 
-using namespace std;
-
-class Pantalones{
-	private:
-		string talla;
-		string tipo;
+class Pantalones: public Ropa{
+	
+	private: 
+		string epoca;
 	
 	public:
-		Pantalones(): talla(" "), tipo(" "){};
-		Pantalones(string ta, string ti): talla (ta), tipo(ti){};
-		
-		string get_talla();
-		string get_tipo();
-		
-		 void set_talla(string );
-		 void set_tipo(string );
+		Pantalones(string ta, string ti, string ep):Ropa(ta, ti){
+		epoca=ep;
+		}
+		string getEpoca(){
+			return epoca;
+		}
+
+void setEpoca(string ep){
+	epoca=ep;
+}
 };
-		 
-string Pantalones::get_talla(){
-	return talla;
-}
-
-
-string Pantalones::get_tipo(){
-	return tipo;
-}
-
-void Pantalones::set_talla(string ta){
-	talla=ta;
-}
-
-void Pantalones::set_tipo(string ti){
-	tipo=ti;
-}

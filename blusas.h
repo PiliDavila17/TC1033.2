@@ -3,40 +3,12 @@
 //	talla (CH,M,G,XG)
 //	Tipo (manga larga o manga corta)
 
-#include<string>
-#include<iostream>
+#include "ropa.h"
 
 
-using namespace std;
-
-class Blusas{
-	private:
-		string talla;
-		string tipo;
+class Blusas: public Ropa{
 	
 	public:
-		Blusas(): talla(" "), tipo(" "){};
-		Blusas(string ta, string ti): talla (ta), tipo(ti){};
-		
-		string get_talla();
-		string get_tipo();
-		
-		 void set_talla(string );
-		 void set_tipo(string );
+		Blusas(string ta, string ti): Ropa(ta,ti){};
+
 };
-		 
-string Blusas::get_talla(){
-	return talla;
-}
-
-
-string Blusas::get_tipo(){
-	return tipo;
-}
-
-void Blusas::set_talla(string ta){
-	talla=ta;
-}
-void Blusas::set_tipo(string ti){
-	tipo=ti;
-}
