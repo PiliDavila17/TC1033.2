@@ -12,4 +12,5 @@ CORRECCIONES AL PROYECTO
 1. Se añadió más información al readme sobre el funcionamiento del problema
 2. Se introdujo el UML que se utilizó para la estructura del programa
 3. Se creo una clase padre que engloba las clases que anteriormente se habían creado.
-
+4. Se completó el UML para la solución del problema
+5. Se agregó una clase por el método de agregación para imprimir una lista de lo solicitado por el usuario.
